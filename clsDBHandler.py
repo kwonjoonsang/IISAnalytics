@@ -3,12 +3,12 @@ import sys
 
 class DBHandler:
 	def __init__(self, **strConn):
-		strConn['host'] = "192.168.101.65"
-		strConn['port'] = 13306
-		strConn['user'] = "root"
-		strConn['passwd'] = "rnjswnstkd!2"
-		strConn['db'] = "LogAnalysis"
-		strConn['charset'] = "utf8"
+		strConn['host'] = "[ServerIP]"
+		strConn['port'] = [ServerPort]
+		strConn['user'] = "[Account]"
+		strConn['passwd'] = "[Password]"
+		strConn['db'] = "[DB Name]"
+		strConn['charset'] = "UTF8"
 		autocommit = strConn.pop("autocommit", True)
 
 		self.dbConn = pymysql.connect(**strConn)
