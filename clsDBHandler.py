@@ -34,6 +34,7 @@ class DBHandler:
 			self.dbConn.rollback()
                         
 		return strInfo
+	
 	def __del__(self):
 		self.dbCursor.close()
 		self.dbConn.close()
